@@ -1,0 +1,32 @@
+
+Imports System.Drawing
+Imports System.Drawing.Drawing2D
+Imports System.Windows.Forms
+
+
+    Dim p As New Pen(Color.Black, 2.5)
+    Dim p2 As New Pen(Color.Black, 5)
+    Dim pt1 As Point
+    Dim pt2 As Point
+    Dim pt3 As Point
+    Dim pt4 As Point
+    Dim drw As Graphics
+    Dim lblctl As Control
+    Dim x As Double
+        Dim tsize As Size
+
+        lblctl = Me.Controls.Item(1)
+        tsize = TextRenderer.MeasureText(lblctl.Text, lblctl.Font)
+        'x = tsize.Width
+
+        x = 50 + (tsize.Width / 2)
+
+        drw = Me.CreateGraphics
+        pt1 = New Point(x, 20)
+        pt2 = New Point(x, 95)
+        drw.DrawLine(p, pt1, pt2)
+
+        pt3 = New Point(x, 95)
+        pt4 = New Point(x, 90)
+        p2.StartCap = LineCap.ArrowAnchor
+        drw.DrawLine(p2, pt3, pt4)

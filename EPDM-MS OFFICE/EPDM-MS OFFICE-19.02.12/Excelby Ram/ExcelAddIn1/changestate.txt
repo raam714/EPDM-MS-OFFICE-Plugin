@@ -1,0 +1,74 @@
+Imports EdmLib
+Public Class Form1
+    Dim vault As New EdmVault5
+    Dim fname As String
+    Dim dfile As IEdmFile5
+    Dim fol As IEdmFolder5
+    Dim state As IEdmState5
+    Dim toState As IEdmState5
+    Dim pos As IEdmPos5
+    Dim trans As IEdmTransition5
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        vault.LoginAuto("NPD_Demo", 0)
+        fname = "E:\Vaults\NPD_Demo\Projects\SIM-AGRI-NPD-001\Customer\525601_EPDM_QSP2010_Imp_Doc_ENG.xls"
+        dfile = vault.GetFileFromPath(fname)
+        fol = vault.GetFolderFromPath("E:\Vaults\NPD_Demo\Projects\SIM-AGRI-NPD-001\Customer")
+        Label2.Text = fname
+        state = dfile.CurrentState
+        Label4.Text = state.Name
+        pos = state.GetFirstTransitionPosition
+        While Not pos.IsNull
+            trans = state.GetNextTransition(pos)
+            ListBox1.Items.Add(trans.Name)
+        End While
+
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
+        Dim tname As String = ListBox1.SelectedItem.ToString
+        Dim blist As IEdmBatchListing2
+        Dim cols() As EdmListCol
+        Dim files() As EdmListFile
+        Dim wfname As String
+        Dim wfmgr As IEdmWorkflowMgr6
+        Dim wf As IEdmWorkflow6
+        Dim tpos As IEdmPos5
+
+        blist = vault.CreateUtility(EdmUtility.EdmUtil_BatchList)
+        blist.AddFile(fname, FileSystem.FileDateTime(fname), 1)
+        blist.CreateList("", cols)
+        blist.GetFiles(files)
+
+        wfname = files(0).moCurrentState.mbsWorkflowName
+        wfmgr = vault.CreateUtility(EdmUtility.EdmUtil_WorkflowMgr)
+        pos = wfmgr.GetFirstWorkflowPosition
+        While Not pos.IsNull
+            wf = wfmgr.GetNextWorkflow(pos)
+            If wf.Name = wfname Then
+                tpos = wf.GetFirstTransitionPosition()
+                While Not tpos.IsNull
+                    trans = wf.GetNextTransition(tpos)
+                    If trans.Name = tname Then
+                        Exit While
+                    End If
+                End While
+                Exit While
+            End If
+        End While
+
+        Label9.Text = wfname
+        toState = trans.ToState
+        Label7.Text = toState.Name
+    End Sub
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Dim bcstate As IEdmBatchChangeState
+
+        bcstate = vault.CreateUtility(EdmUtility.EdmUtil_BatchChangeState)
+        bcstate.AddFile(dfile.ID, fol.ID)
+        bcstate.CreateTree(ListBox1.SelectedItem.ToString)
+        bcstate.ShowDlg(0)
+        bcstate.ChangeState(0)
+    End Sub
+End Class

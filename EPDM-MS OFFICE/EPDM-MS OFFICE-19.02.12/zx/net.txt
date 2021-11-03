@@ -1,0 +1,7 @@
+http://blog.bvisual.net/2011/11/08/deploying-a-visio-2007-or-2010-vsto-add-in-with-visual-studio-2010/
+http://www.clear-lines.com/blog/post/create-excel-2007-vsto-add-in-msi-installation.aspx
+http://msdn.microsoft.com/en-us/library/ff937654.aspx
+http://www.youtube.com/watch?v=K2csNXOjego&playnext=1&list=PL7N8CTIW6DA7P1Y1_VLSTYBQPKIZSC8DP
+http://msdn.microsoft.com/en-us/library/cc563937.aspx#VSTO3SolutionPart1_DeploymentMethods
+http://msdn.microsoft.com/en-us/library/ff937654.aspx
+http://support.microsoft.com/kb/976811/en-us

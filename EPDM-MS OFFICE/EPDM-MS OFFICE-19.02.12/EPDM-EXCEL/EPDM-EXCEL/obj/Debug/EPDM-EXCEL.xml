@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EPDM-EXCEL
+</name>
+</assembly>
+<members>
+<member name="P:EPDM_EXCEL.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:EPDM_EXCEL.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:EPDM_EXCEL.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:EPDM_EXCEL.ThisAddIn.#ctor(Microsoft.Office.Tools.Excel.ApplicationFactory,System.IServiceProvider)">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.Initialize">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.FinishInitialization">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.InitializeDataBindings">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.InitializeCachedData">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.InitializeData">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.BindToData">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.StartCaching(System.String)">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.StopCaching(System.String)">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.IsCached(System.String)">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.BeginInitialization">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.EndInitialization">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.InitializeControls">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.InitializeComponents">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.NeedsFill(System.String)">
+</member><member name="M:EPDM_EXCEL.ThisAddIn.OnShutdown">
+</member><member name="T:EPDM_EXCEL.ThisAddIn">
+</member><member name="M:EPDM_EXCEL.Globals.#ctor">
+</member><member name="T:EPDM_EXCEL.Globals">
+</member><member name="M:EPDM_EXCEL.ThisRibbonCollection.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+</member><member name="T:EPDM_EXCEL.ThisRibbonCollection">
+</member>
+</members>
+</doc>

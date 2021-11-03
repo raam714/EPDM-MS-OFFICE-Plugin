@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EPDM-MS Office Connector", "ExcelAddIn1\EPDM-MS Office Connector.vbproj", "{163556F6-9B5B-41D1-B6ED-C1AD0020D33F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EGS-ExcelSetup", "EGS-ExcelSetup\EGS-ExcelSetup.vdproj", "{E1B1C59D-CB02-4868-A992-EBD0EDD326BD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Excel", "E:\Excel Demo\Excelby Ram\ExcelAddIn1\Excel\Excel.vbproj", "{561F1574-A25E-40E4-84AD-9BE9808062FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{163556F6-9B5B-41D1-B6ED-C1AD0020D33F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163556F6-9B5B-41D1-B6ED-C1AD0020D33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163556F6-9B5B-41D1-B6ED-C1AD0020D33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163556F6-9B5B-41D1-B6ED-C1AD0020D33F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B1C59D-CB02-4868-A992-EBD0EDD326BD}.Debug|Any CPU.ActiveCfg = Debug
+		{E1B1C59D-CB02-4868-A992-EBD0EDD326BD}.Release|Any CPU.ActiveCfg = Release
+		{561F1574-A25E-40E4-84AD-9BE9808062FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561F1574-A25E-40E4-84AD-9BE9808062FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561F1574-A25E-40E4-84AD-9BE9808062FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561F1574-A25E-40E4-84AD-9BE9808062FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+Dim fpath As String
+    Dim vault As New EdmVault5
+    Dim vault1 As IEdmVault8
+    Dim vinfo() As EdmViewInfo
+    Dim vlen As Integer
+    Dim rfpath() As String
+    Dim vaultname As String
+    Dim findex As Integer = 0
+
+fpath = Wb.Path
+        vault1 = vault
+        vault1.GetVaultViews(vinfo, False)
+        vinfo.GetLength(vlen)
+        ReDim rfpath(vlen - 1)
+        For Me.i = 0 To UBound(vinfo)
+            If fpath.Contains(vinfo(i).mbsPath) = True Then
+                findex = 1
+                vaultname = vinfo(i).mbsVaultName
+                Exit For
+            End If
+        Next
+        If findex = 1 Then
+            MsgBox("This is a vault document. Vault Name: " & vaultname)
+        Else
+            MsgBox("This is not a vault document!!")
+        End If
